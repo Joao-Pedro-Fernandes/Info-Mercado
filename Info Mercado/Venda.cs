@@ -12,6 +12,7 @@ namespace Info_Mercado
         private string cliente;
         private List<Produto> produtos;
         private double valor_total;
+        private string data;
         public Venda()
         {
             produtos= new List<Produto>();
@@ -20,5 +21,6 @@ namespace Info_Mercado
         public int Cliente { get; set; }
         public int Produtos { get; set; }
         public int Valor_Total { get; set; }
+        public string Data { get; set; }
     }
 }
