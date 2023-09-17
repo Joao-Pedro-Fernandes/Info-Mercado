@@ -1,0 +1,13 @@
+C:\Users\João Pedro\Desktop\Info Mercado\Info Mercado\bin\Debug\Info Mercado.exe.config
+C:\Users\João Pedro\Desktop\Info Mercado\Info Mercado\bin\Debug\Info Mercado.exe
+C:\Users\João Pedro\Desktop\Info Mercado\Info Mercado\bin\Debug\Info Mercado.pdb
+C:\Users\João Pedro\Desktop\Info Mercado\Info Mercado\obj\Debug\Info Mercado.csproj.AssemblyReference.cache
+C:\Users\João Pedro\Desktop\Info Mercado\Info Mercado\obj\Debug\Info Mercado.csproj.SuggestedBindingRedirects.cache
+C:\Users\João Pedro\Desktop\Info Mercado\Info Mercado\obj\Debug\Info_Mercado.MenuPrincipal.resources
+C:\Users\João Pedro\Desktop\Info Mercado\Info Mercado\obj\Debug\Info_Mercado.Properties.Resources.resources
+C:\Users\João Pedro\Desktop\Info Mercado\Info Mercado\obj\Debug\Info_Mercado.Vendas.resources
+C:\Users\João Pedro\Desktop\Info Mercado\Info Mercado\obj\Debug\Info Mercado.csproj.GenerateResource.cache
+C:\Users\João Pedro\Desktop\Info Mercado\Info Mercado\obj\Debug\Info Mercado.csproj.CoreCompileInputs.cache
+C:\Users\João Pedro\Desktop\Info Mercado\Info Mercado\obj\Debug\Info Mercado.exe
+C:\Users\João Pedro\Desktop\Info Mercado\Info Mercado\obj\Debug\Info Mercado.pdb
+C:\Users\João Pedro\Desktop\Info Mercado\Info Mercado\obj\Debug\Info_Mercado.Produtos.resources
