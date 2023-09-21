@@ -25,5 +25,11 @@ namespace Info_Mercado
             lstProdutos.Columns.Add("Preço", 260, HorizontalAlignment.Left);
             lstProdutos.Columns.Add("Qtd", 100, HorizontalAlignment.Left);
         }
+
+        private void btnCadastrarProduto_Click(object sender, EventArgs e)
+        {
+            var cadastroProduto = new Produtos();
+            cadastroProduto.ShowDialog();
+        }
     }
 }
