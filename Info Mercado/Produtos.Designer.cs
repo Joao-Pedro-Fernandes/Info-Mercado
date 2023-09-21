@@ -48,7 +48,7 @@
             // 
             this.lstProdutos.HideSelection = false;
             this.lstProdutos.Location = new System.Drawing.Point(12, 46);
-            this.lstProdutos.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lstProdutos.Margin = new System.Windows.Forms.Padding(6);
             this.lstProdutos.Name = "lstProdutos";
             this.lstProdutos.Size = new System.Drawing.Size(608, 533);
             this.lstProdutos.TabIndex = 3;
@@ -57,12 +57,13 @@
             // btnCadastrarProduto
             // 
             this.btnCadastrarProduto.Location = new System.Drawing.Point(632, 46);
-            this.btnCadastrarProduto.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnCadastrarProduto.Margin = new System.Windows.Forms.Padding(6);
             this.btnCadastrarProduto.Name = "btnCadastrarProduto";
             this.btnCadastrarProduto.Size = new System.Drawing.Size(206, 54);
             this.btnCadastrarProduto.TabIndex = 4;
             this.btnCadastrarProduto.Text = "Cadastrar Produto";
             this.btnCadastrarProduto.UseVisualStyleBackColor = true;
+            this.btnCadastrarProduto.Click += new System.EventHandler(this.btnCadastrarProduto_Click);
             // 
             // Produtos
             // 
@@ -73,7 +74,7 @@
             this.Controls.Add(this.lstProdutos);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Produtos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Produtos";
