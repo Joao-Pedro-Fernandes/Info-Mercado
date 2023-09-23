@@ -15,15 +15,21 @@ namespace Info_Mercado
         public Vendas()
         {
             InitializeComponent();
+            lstVendas.View = View.Details;
             lstVendas.LabelEdit = true;
             lstVendas.AllowColumnReorder = true;
             lstVendas.FullRowSelect = true;
-            lstVendas.GridLines = true;
 
             lstVendas.Columns.Add("Id", 50, HorizontalAlignment.Left);
-            lstVendas.Columns.Add("Cliente", 100, HorizontalAlignment.Left);
+            lstVendas.Columns.Add("Cliente", 200, HorizontalAlignment.Left);
             lstVendas.Columns.Add("Produtos", 260, HorizontalAlignment.Left);
             lstVendas.Columns.Add("Valor", 100, HorizontalAlignment.Left); 
+        }
+
+        private void btnCadastrarVenda_Click(object sender, EventArgs e)
+        {
+            var vendasTela = new CadastrarVenda();
+            vendasTela.ShowDialog();
         }
     }
 }
