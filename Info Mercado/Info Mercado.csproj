@@ -46,17 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CadastrarVenda.cs">
+    <Compile Include="CadastroProd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadastrarVenda.Designer.cs">
-      <DependentUpon>CadastrarVenda.cs</DependentUpon>
+    <Compile Include="CadastroProd.Designer.cs">
+      <DependentUpon>CadastroProd.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisaProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PesquisaProd.Designer.cs">
+      <DependentUpon>PesquisaProd.cs</DependentUpon>
     </Compile>
     <Compile Include="Produto.cs" />
     <Compile Include="Produtos.cs">
@@ -74,11 +80,14 @@
     <Compile Include="Vendas.Designer.cs">
       <DependentUpon>Vendas.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CadastrarVenda.resx">
-      <DependentUpon>CadastrarVenda.cs</DependentUpon>
+    <EmbeddedResource Include="CadastroProd.resx">
+      <DependentUpon>CadastroProd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PesquisaProd.resx">
+      <DependentUpon>PesquisaProd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Produtos.resx">
       <DependentUpon>Produtos.cs</DependentUpon>

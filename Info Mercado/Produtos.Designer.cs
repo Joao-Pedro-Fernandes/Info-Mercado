@@ -28,65 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.lstProdutos = new System.Windows.Forms.ListView();
-            this.btnCadastrarProduto = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.pesquisarProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // menuStrip1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(198, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Tabela de Produtos";
+            this.menuStrip1.BackColor = System.Drawing.Color.Silver;
+            this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip1.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pesquisarProdutoToolStripMenuItem,
+            this.cadastrarProdutoToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip1.Size = new System.Drawing.Size(124, 359);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "Funções";
             // 
-            // lstProdutos
+            // pesquisarProdutoToolStripMenuItem
             // 
-            this.lstProdutos.HideSelection = false;
-            this.lstProdutos.Location = new System.Drawing.Point(12, 46);
-            this.lstProdutos.Margin = new System.Windows.Forms.Padding(6);
-            this.lstProdutos.Name = "lstProdutos";
-            this.lstProdutos.Size = new System.Drawing.Size(608, 533);
-            this.lstProdutos.TabIndex = 3;
-            this.lstProdutos.UseCompatibleStateImageBehavior = false;
+            this.pesquisarProdutoToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
+            this.pesquisarProdutoToolStripMenuItem.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pesquisarProdutoToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            this.pesquisarProdutoToolStripMenuItem.Name = "pesquisarProdutoToolStripMenuItem";
+            this.pesquisarProdutoToolStripMenuItem.Size = new System.Drawing.Size(117, 24);
+            this.pesquisarProdutoToolStripMenuItem.Text = "Pesquisar produto";
+            this.pesquisarProdutoToolStripMenuItem.Click += new System.EventHandler(this.pesquisarProdutoToolStripMenuItem_Click);
             // 
-            // btnCadastrarProduto
+            // cadastrarProdutoToolStripMenuItem
             // 
-            this.btnCadastrarProduto.Location = new System.Drawing.Point(632, 46);
-            this.btnCadastrarProduto.Margin = new System.Windows.Forms.Padding(6);
-            this.btnCadastrarProduto.Name = "btnCadastrarProduto";
-            this.btnCadastrarProduto.Size = new System.Drawing.Size(206, 54);
-            this.btnCadastrarProduto.TabIndex = 4;
-            this.btnCadastrarProduto.Text = "Cadastrar Produto";
-            this.btnCadastrarProduto.UseVisualStyleBackColor = true;
-            this.btnCadastrarProduto.Click += new System.EventHandler(this.btnCadastrarProduto_Click);
+            this.cadastrarProdutoToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
+            this.cadastrarProdutoToolStripMenuItem.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cadastrarProdutoToolStripMenuItem.Name = "cadastrarProdutoToolStripMenuItem";
+            this.cadastrarProdutoToolStripMenuItem.Size = new System.Drawing.Size(117, 24);
+            this.cadastrarProdutoToolStripMenuItem.Text = "Cadastrar produto";
+            this.cadastrarProdutoToolStripMenuItem.Click += new System.EventHandler(this.cadastrarProdutoToolStripMenuItem_Click);
             // 
             // Produtos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(844, 591);
-            this.Controls.Add(this.btnCadastrarProduto);
-            this.Controls.Add(this.lstProdutos);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(462, 359);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Produtos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Produtos";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView lstProdutos;
-        private System.Windows.Forms.Button btnCadastrarProduto;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem pesquisarProdutoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarProdutoToolStripMenuItem;
     }
 }

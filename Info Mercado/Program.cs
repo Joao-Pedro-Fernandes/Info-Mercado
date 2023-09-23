@@ -8,7 +8,6 @@ namespace Info_Mercado
 {
     internal static class Program
     {
-        public static int CountVendas = 1;
         public static List<Produto> ListaProdutos = new List<Produto>();
         public static List<Venda> ListaVendas = new List<Venda>();
 
