@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,9 @@ namespace Info_Mercado
         private int qtd;
         private string perecivel;
         private int qtdVenda = 0;
+        private Bitmap img;
+
+        public Bitmap Img { get; set; }
 
         public int QtdVenda { get; set; }
         public int Id { get; set; }

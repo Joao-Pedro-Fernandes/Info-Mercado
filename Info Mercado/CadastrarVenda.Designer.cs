@@ -31,6 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdbDinheiro = new System.Windows.Forms.RadioButton();
+            this.rdbCartao = new System.Windows.Forms.RadioButton();
             this.btnFinalizar = new System.Windows.Forms.Button();
             this.lblValorTotal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,8 +48,6 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.btnMostrar = new System.Windows.Forms.Button();
-            this.rdbCartao = new System.Windows.Forms.RadioButton();
-            this.rdbDinheiro = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,14 +91,37 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informações da venda";
             // 
+            // rdbDinheiro
+            // 
+            this.rdbDinheiro.AutoSize = true;
+            this.rdbDinheiro.Location = new System.Drawing.Point(120, 200);
+            this.rdbDinheiro.Name = "rdbDinheiro";
+            this.rdbDinheiro.Size = new System.Drawing.Size(102, 29);
+            this.rdbDinheiro.TabIndex = 15;
+            this.rdbDinheiro.TabStop = true;
+            this.rdbDinheiro.Text = "Dinheiro";
+            this.rdbDinheiro.UseVisualStyleBackColor = true;
+            // 
+            // rdbCartao
+            // 
+            this.rdbCartao.AutoSize = true;
+            this.rdbCartao.Location = new System.Drawing.Point(25, 200);
+            this.rdbCartao.Name = "rdbCartao";
+            this.rdbCartao.Size = new System.Drawing.Size(89, 29);
+            this.rdbCartao.TabIndex = 14;
+            this.rdbCartao.TabStop = true;
+            this.rdbCartao.Text = "Cartão";
+            this.rdbCartao.UseVisualStyleBackColor = true;
+            // 
             // btnFinalizar
             // 
+            this.btnFinalizar.BackColor = System.Drawing.Color.PowderBlue;
             this.btnFinalizar.Location = new System.Drawing.Point(571, 194);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(116, 34);
             this.btnFinalizar.TabIndex = 13;
             this.btnFinalizar.Text = "Finalizar";
-            this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.UseVisualStyleBackColor = false;
             this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // lblValorTotal
@@ -196,60 +219,42 @@
             // 
             // btnPesquisar
             // 
+            this.btnPesquisar.BackColor = System.Drawing.Color.PowderBlue;
             this.btnPesquisar.Location = new System.Drawing.Point(413, 278);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(116, 34);
             this.btnPesquisar.TabIndex = 11;
             this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.UseVisualStyleBackColor = false;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnAdicionar
             // 
+            this.btnAdicionar.BackColor = System.Drawing.Color.PowderBlue;
             this.btnAdicionar.Location = new System.Drawing.Point(657, 278);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(116, 34);
             this.btnAdicionar.TabIndex = 12;
             this.btnAdicionar.Text = "Adicionar";
-            this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.UseVisualStyleBackColor = false;
             this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // btnMostrar
             // 
+            this.btnMostrar.BackColor = System.Drawing.Color.PowderBlue;
             this.btnMostrar.Location = new System.Drawing.Point(535, 278);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(116, 34);
             this.btnMostrar.TabIndex = 13;
             this.btnMostrar.Text = "Mostrar";
-            this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.UseVisualStyleBackColor = false;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
-            // 
-            // rdbCartao
-            // 
-            this.rdbCartao.AutoSize = true;
-            this.rdbCartao.Location = new System.Drawing.Point(25, 200);
-            this.rdbCartao.Name = "rdbCartao";
-            this.rdbCartao.Size = new System.Drawing.Size(89, 29);
-            this.rdbCartao.TabIndex = 14;
-            this.rdbCartao.TabStop = true;
-            this.rdbCartao.Text = "Cartão";
-            this.rdbCartao.UseVisualStyleBackColor = true;
-            // 
-            // rdbDinheiro
-            // 
-            this.rdbDinheiro.AutoSize = true;
-            this.rdbDinheiro.Location = new System.Drawing.Point(120, 200);
-            this.rdbDinheiro.Name = "rdbDinheiro";
-            this.rdbDinheiro.Size = new System.Drawing.Size(102, 29);
-            this.rdbDinheiro.TabIndex = 15;
-            this.rdbDinheiro.TabStop = true;
-            this.rdbDinheiro.Text = "Dinheiro";
-            this.rdbDinheiro.UseVisualStyleBackColor = true;
             // 
             // CadastrarVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(844, 591);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.btnAdicionar);

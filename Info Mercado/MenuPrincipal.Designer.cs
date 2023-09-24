@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnProdutos = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnVendas = new System.Windows.Forms.Button();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.lblTimer = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnProdutos
@@ -67,12 +70,28 @@
             this.btnVendas.UseVisualStyleBackColor = false;
             this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
             // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblTimer
+            // 
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimer.Location = new System.Drawing.Point(458, 537);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(0, 16);
+            this.lblTimer.TabIndex = 3;
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(637, 562);
+            this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.btnVendas);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnProdutos);
@@ -91,6 +110,8 @@
         private System.Windows.Forms.Button btnProdutos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnVendas;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Label lblTimer;
     }
 }
 

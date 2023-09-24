@@ -40,6 +40,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAdicionarImagem = new System.Windows.Forms.Button();
+            this.AbrirArquivo = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblProd
@@ -156,12 +160,36 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(342, 111);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(277, 227);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnAdicionarImagem
+            // 
+            this.btnAdicionarImagem.BackColor = System.Drawing.Color.Green;
+            this.btnAdicionarImagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarImagem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAdicionarImagem.Location = new System.Drawing.Point(383, 66);
+            this.btnAdicionarImagem.Name = "btnAdicionarImagem";
+            this.btnAdicionarImagem.Size = new System.Drawing.Size(195, 39);
+            this.btnAdicionarImagem.TabIndex = 14;
+            this.btnAdicionarImagem.Text = "Adicionar Imagem";
+            this.btnAdicionarImagem.UseVisualStyleBackColor = false;
+            this.btnAdicionarImagem.Click += new System.EventHandler(this.btnAdicionarImagem_Click);
+            // 
             // CadastroProd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(662, 448);
+            this.Controls.Add(this.btnAdicionarImagem);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
@@ -177,6 +205,7 @@
             this.Name = "CadastroProd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Produto";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,5 +225,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnAdicionarImagem;
+        private System.Windows.Forms.OpenFileDialog AbrirArquivo;
     }
 }

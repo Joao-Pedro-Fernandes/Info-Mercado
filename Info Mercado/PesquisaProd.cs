@@ -19,7 +19,9 @@ namespace Info_Mercado
 
         private void btnPesquisa_Click(object sender, EventArgs e)
         {
+            listProd.Items.Clear(); 
             int verificaNum;
+            bool flagId = true;
             if (int.TryParse(txtId.Text, out verificaNum))
             {
                 if (Program.ListaProdutos.Any())
@@ -30,11 +32,13 @@ namespace Info_Mercado
                         {
                             string aux = item.Nome + "     R$:" + item.Preco.ToString("N2") + "     Quantidade:" + item.Qtd + "    Validade:" + item.Perecivel.ToString();
                             listProd.Items.Add(aux);
+                            flagId = false;
                         }
-                        else
-                            MessageBox.Show("Número de Lote não existe.");
-
+                                                    
                     }
+                    if(flagId)
+                        MessageBox.Show("Número de lote não existe.");
+
                 }
                 else
                     MessageBox.Show("Não exite nenhum produto cadastrado.");

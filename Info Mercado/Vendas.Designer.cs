@@ -46,24 +46,26 @@
             // 
             // btnCadastrarVenda
             // 
+            this.btnCadastrarVenda.BackColor = System.Drawing.Color.PowderBlue;
             this.btnCadastrarVenda.Location = new System.Drawing.Point(632, 72);
             this.btnCadastrarVenda.Margin = new System.Windows.Forms.Padding(6);
             this.btnCadastrarVenda.Name = "btnCadastrarVenda";
             this.btnCadastrarVenda.Size = new System.Drawing.Size(206, 54);
             this.btnCadastrarVenda.TabIndex = 5;
             this.btnCadastrarVenda.Text = "Cadastrar Venda";
-            this.btnCadastrarVenda.UseVisualStyleBackColor = true;
+            this.btnCadastrarVenda.UseVisualStyleBackColor = false;
             this.btnCadastrarVenda.Click += new System.EventHandler(this.btnCadastrarVenda_Click);
             // 
             // btnMostrarVendas
             // 
+            this.btnMostrarVendas.BackColor = System.Drawing.Color.PowderBlue;
             this.btnMostrarVendas.Location = new System.Drawing.Point(632, 138);
             this.btnMostrarVendas.Margin = new System.Windows.Forms.Padding(6);
             this.btnMostrarVendas.Name = "btnMostrarVendas";
             this.btnMostrarVendas.Size = new System.Drawing.Size(206, 54);
             this.btnMostrarVendas.TabIndex = 6;
             this.btnMostrarVendas.Text = "Mostrar Vendas";
-            this.btnMostrarVendas.UseVisualStyleBackColor = true;
+            this.btnMostrarVendas.UseVisualStyleBackColor = false;
             this.btnMostrarVendas.Click += new System.EventHandler(this.btnMostrarVendas_Click);
             // 
             // txtPesquisaVenda
@@ -76,19 +78,21 @@
             // 
             // btnPesquisar
             // 
+            this.btnPesquisar.BackColor = System.Drawing.Color.PowderBlue;
             this.btnPesquisar.Location = new System.Drawing.Point(632, 11);
             this.btnPesquisar.Margin = new System.Windows.Forms.Padding(6);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(206, 51);
             this.btnPesquisar.TabIndex = 8;
             this.btnPesquisar.Text = "Pesquisar Cliente";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.UseVisualStyleBackColor = false;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // Vendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(844, 591);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.txtPesquisaVenda);

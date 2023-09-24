@@ -27,31 +27,6 @@ namespace Info_Mercado
             lstVendas.Columns.Add("Valor", 100, HorizontalAlignment.Left);
 
 
-            //REMOVER
-            Produto P = new Produto();
-            P.Id = 1;
-            P.Nome = "Nescau";
-            P.Preco = 5;
-            P.Qtd = 10;
-            P.Perecivel = "";
-            Program.ListaProdutos.Add(P);
-
-            Produto P1 = new Produto();
-            P1.Id = 2;
-            P1.Nome = "Arroz";
-            P1.Preco = 22;
-            P1.Qtd = 10;
-            P1.Perecivel = "";
-            Program.ListaProdutos.Add(P1);
-
-            Produto P2 = new Produto();
-            P2.Id = 3;
-            P2.Nome = "Feijão";
-            P2.Preco = 11;
-            P2.Qtd = 10;
-            P2.Perecivel = "";
-            Program.ListaProdutos.Add(P2);
-            //REMOVER
 
 
         }

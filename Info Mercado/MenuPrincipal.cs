@@ -12,6 +12,7 @@ namespace Info_Mercado
 {
     public partial class MenuPrincipal : Form
     {
+        public static int segundos = 0;
         public MenuPrincipal()
         {
             InitializeComponent();
@@ -27,6 +28,12 @@ namespace Info_Mercado
         {
             var produtos = new Produtos();
             produtos.ShowDialog();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            segundos++;
+            lblTimer.Text = $"Tempo em Atividade: {segundos}s.";
         }
     }
 }

@@ -49,6 +49,8 @@ namespace Info_Mercado
                             prod.Qtd = int.Parse(txtQtd.Text);
                             prod.Preco = double.Parse(txtPreco.Text);
                             prod.Perecivel = dataValidade.Value.ToString("dd/MM/yyyy");
+                            if (img != null)
+                                prod.Img = new Bitmap(pictureBox1.Image);
                             Program.ListaProdutos.Add(prod);
                             MessageBox.Show("Produto cadastrado!");
                             txtId.Text = "";
@@ -70,6 +72,21 @@ namespace Info_Mercado
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private Bitmap img;
+
+        private void btnAdicionarImagem_Click(object sender, EventArgs e)
+        {
+            if (AbrirArquivo.ShowDialog() == DialogResult.OK)
+            {
+                img = new Bitmap(AbrirArquivo.FileName);
+                pictureBox1.Image = img;
+            }
+            else
+            {
+                img = null;
+            }
         }
     }
 }
