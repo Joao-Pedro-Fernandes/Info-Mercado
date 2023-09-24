@@ -35,46 +35,49 @@
             // 
             // btnProdutos
             // 
-            this.btnProdutos.Location = new System.Drawing.Point(160, 199);
-            this.btnProdutos.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnProdutos.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnProdutos.Location = new System.Drawing.Point(160, 155);
+            this.btnProdutos.Margin = new System.Windows.Forms.Padding(6);
             this.btnProdutos.Name = "btnProdutos";
             this.btnProdutos.Size = new System.Drawing.Size(334, 83);
             this.btnProdutos.TabIndex = 0;
             this.btnProdutos.Text = "Produtos";
-            this.btnProdutos.UseVisualStyleBackColor = true;
+            this.btnProdutos.UseVisualStyleBackColor = false;
             this.btnProdutos.Click += new System.EventHandler(this.btnProdutos_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(99, 35);
+            this.label1.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(76, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(454, 78);
+            this.label1.Size = new System.Drawing.Size(483, 74);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Info Mercado";
+            this.label1.Text = "Controle de Estoque e vendas \r\n       Mercado Mart Minas";
             // 
             // btnVendas
             // 
-            this.btnVendas.Location = new System.Drawing.Point(160, 330);
+            this.btnVendas.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnVendas.Location = new System.Drawing.Point(160, 306);
             this.btnVendas.Margin = new System.Windows.Forms.Padding(6);
             this.btnVendas.Name = "btnVendas";
             this.btnVendas.Size = new System.Drawing.Size(334, 83);
             this.btnVendas.TabIndex = 2;
             this.btnVendas.Text = "Vendas";
-            this.btnVendas.UseVisualStyleBackColor = true;
+            this.btnVendas.UseVisualStyleBackColor = false;
             this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
             // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(637, 562);
             this.Controls.Add(this.btnVendas);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnProdutos);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";

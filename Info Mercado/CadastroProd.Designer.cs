@@ -175,7 +175,8 @@
             this.Controls.Add(this.lblPreco);
             this.Controls.Add(this.lblProd);
             this.Name = "CadastroProd";
-            this.Text = "CadastroProd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastro Produto";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -30,32 +30,6 @@ namespace Info_Mercado
             lstVenderProdutos.Columns.Add("Qtd. Estoque", 150, HorizontalAlignment.Center);
             lstVenderProdutos.Columns.Add("Preço", 200, HorizontalAlignment.Center);
 
-            //REMOVER
-            Produto P = new Produto();
-            P.Id = 1;
-            P.Nome = "Nescau";
-            P.Preco = 5;
-            P.Qtd = 10;
-            P.Perecivel = false;
-            Program.ListaProdutos.Add(P);
-
-            Produto P1 = new Produto();
-            P1.Id = 2;
-            P1.Nome = "Arroz";
-            P1.Preco = 22;
-            P1.Qtd = 10;
-            P1.Perecivel = false;
-            Program.ListaProdutos.Add(P1);
-
-            Produto P2 = new Produto();
-            P2.Id = 3;
-            P2.Nome = "Feijão";
-            P2.Preco = 11;
-            P2.Qtd = 10;
-            P2.Perecivel = false;
-            Program.ListaProdutos.Add(P2);
-            //REMOVER
-
             lblId.Text = venda.Id.ToString();
             lblData.Text = venda.Data.ToString();
         }
@@ -118,12 +92,61 @@ namespace Info_Mercado
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
+            lstVenderProdutos.Items.Clear();
             foreach (Produto p in Program.ListaProdutos)
             {
                 string[] row = { p.Id.ToString(), p.Nome, p.Qtd.ToString(), p.Preco.ToString("R$0.00") };
                 var listViewItem = new ListViewItem(row);
                 lstVenderProdutos.Items.Add(listViewItem);
             }
+        }
+
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            if (rdbCartao.Checked) venda.Pagamento = "Cartão";
+            else venda.Pagamento = "Dinheiro";
+            if (txtNomeCLiente.Text == "")
+            {
+                MessageBox.Show("O nome do cliente não pode estar vazio!");
+                Dispose();
+                return;
+            }
+            if (venda.Produtos == null)
+            {
+                MessageBox.Show("Não produtos nesta venda!");
+                Dispose();
+                return;
+            }
+            foreach (Produto p in venda.Produtos)
+            {
+                if (p.Qtd > 0)
+                {
+                    foreach (Produto produto in Program.ListaProdutos)
+                        if (p.Id == produto.Id)
+                        {
+                            int x = produto.Qtd; int y = produto.QtdVenda;
+                            if ((x-y)>=0)
+                                produto.Qtd -= produto.QtdVenda;
+                            else
+                            {
+                                MessageBox.Show("Quantidade insuficiente!");
+                                Dispose();
+                                return;
+                            }
+                        }                       
+                }     
+                else
+                {
+                    MessageBox.Show("Não temos esse produto em estoque!");
+                    Dispose();
+                    return;
+                }
+            }
+            venda.Cliente = txtNomeCLiente.Text;
+            Program.ListaVendas.Add(venda);
+            Program.CountVendas++;
+            MessageBox.Show("Venda realizada com sucesso!");
+            Dispose();
         }
     }
 }

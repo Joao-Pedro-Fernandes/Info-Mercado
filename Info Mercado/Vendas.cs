@@ -19,17 +19,70 @@ namespace Info_Mercado
             lstVendas.LabelEdit = true;
             lstVendas.AllowColumnReorder = true;
             lstVendas.FullRowSelect = true;
+            lstVendas.GridLines = true;
 
             lstVendas.Columns.Add("Id", 50, HorizontalAlignment.Left);
             lstVendas.Columns.Add("Cliente", 200, HorizontalAlignment.Left);
             lstVendas.Columns.Add("Produtos", 260, HorizontalAlignment.Left);
-            lstVendas.Columns.Add("Valor", 100, HorizontalAlignment.Left); 
+            lstVendas.Columns.Add("Valor", 100, HorizontalAlignment.Left);
+
+
+            //REMOVER
+            Produto P = new Produto();
+            P.Id = 1;
+            P.Nome = "Nescau";
+            P.Preco = 5;
+            P.Qtd = 10;
+            P.Perecivel = "";
+            Program.ListaProdutos.Add(P);
+
+            Produto P1 = new Produto();
+            P1.Id = 2;
+            P1.Nome = "Arroz";
+            P1.Preco = 22;
+            P1.Qtd = 10;
+            P1.Perecivel = "";
+            Program.ListaProdutos.Add(P1);
+
+            Produto P2 = new Produto();
+            P2.Id = 3;
+            P2.Nome = "Feijão";
+            P2.Preco = 11;
+            P2.Qtd = 10;
+            P2.Perecivel = "";
+            Program.ListaProdutos.Add(P2);
+            //REMOVER
+
+
         }
 
         private void btnCadastrarVenda_Click(object sender, EventArgs e)
         {
-            var vendasTela = new CadastrarVenda();
-            vendasTela.ShowDialog();
+            CadastrarVenda cadastrarVenda = new CadastrarVenda();
+            cadastrarVenda.ShowDialog();
+        }
+
+        private void btnMostrarVendas_Click(object sender, EventArgs e)
+        {
+            lstVendas.Items.Clear();
+            foreach (Venda v in Program.ListaVendas)
+            {
+                string[] row = { v.Id.ToString(), v.Cliente, v.GetProdutos() , v.Valor_Total.ToString("R$0.00") };
+                var listViewItem = new ListViewItem(row);
+                lstVendas.Items.Add(listViewItem);
+            }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            lstVendas.Items.Clear();
+            foreach (Venda v in Program.ListaVendas)
+                if (v.Cliente == txtPesquisaVenda.Text)
+                {
+                    string[] row = { v.Id.ToString(), v.Cliente, v.GetProdutos(), v.Valor_Total.ToString("R$0.00") };
+                    var listViewItem = new ListViewItem(row);
+                    lstVendas.Items.Add(listViewItem);
+                }     
         }
     }
 }

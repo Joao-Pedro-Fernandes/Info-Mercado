@@ -38,7 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblListaProdutos = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNomeCLiente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lstVenderProdutos = new System.Windows.Forms.ListView();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,6 +46,8 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.btnMostrar = new System.Windows.Forms.Button();
+            this.rdbCartao = new System.Windows.Forms.RadioButton();
+            this.rdbDinheiro = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +70,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rdbDinheiro);
+            this.groupBox1.Controls.Add(this.rdbCartao);
             this.groupBox1.Controls.Add(this.btnFinalizar);
             this.groupBox1.Controls.Add(this.lblValorTotal);
             this.groupBox1.Controls.Add(this.label5);
@@ -75,26 +79,27 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.lblListaProdutos);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtNomeCLiente);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lblId);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.Location = new System.Drawing.Point(62, 24);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(712, 199);
+            this.groupBox1.Size = new System.Drawing.Size(712, 234);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informações da venda";
             // 
             // btnFinalizar
             // 
-            this.btnFinalizar.Location = new System.Drawing.Point(571, 154);
+            this.btnFinalizar.Location = new System.Drawing.Point(571, 194);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(116, 34);
             this.btnFinalizar.TabIndex = 13;
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // lblValorTotal
             // 
@@ -148,12 +153,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Lista de Produtos:";
             // 
-            // textBox1
+            // txtNomeCLiente
             // 
-            this.textBox1.Location = new System.Drawing.Point(189, 76);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(498, 30);
-            this.textBox1.TabIndex = 3;
+            this.txtNomeCLiente.Location = new System.Drawing.Point(189, 76);
+            this.txtNomeCLiente.Name = "txtNomeCLiente";
+            this.txtNomeCLiente.Size = new System.Drawing.Size(498, 30);
+            this.txtNomeCLiente.TabIndex = 3;
             // 
             // label2
             // 
@@ -167,16 +172,16 @@
             // lstVenderProdutos
             // 
             this.lstVenderProdutos.HideSelection = false;
-            this.lstVenderProdutos.Location = new System.Drawing.Point(62, 292);
+            this.lstVenderProdutos.Location = new System.Drawing.Point(62, 328);
             this.lstVenderProdutos.Name = "lstVenderProdutos";
-            this.lstVenderProdutos.Size = new System.Drawing.Size(712, 266);
+            this.lstVenderProdutos.Size = new System.Drawing.Size(712, 230);
             this.lstVenderProdutos.TabIndex = 3;
             this.lstVenderProdutos.UseCompatibleStateImageBehavior = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(57, 246);
+            this.label6.Location = new System.Drawing.Point(56, 283);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 25);
             this.label6.TabIndex = 10;
@@ -184,14 +189,14 @@
             // 
             // txtPesquisa
             // 
-            this.txtPesquisa.Location = new System.Drawing.Point(156, 243);
+            this.txtPesquisa.Location = new System.Drawing.Point(155, 280);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(252, 30);
             this.txtPesquisa.TabIndex = 10;
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(414, 241);
+            this.btnPesquisar.Location = new System.Drawing.Point(413, 278);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(116, 34);
             this.btnPesquisar.TabIndex = 11;
@@ -201,7 +206,7 @@
             // 
             // btnAdicionar
             // 
-            this.btnAdicionar.Location = new System.Drawing.Point(658, 241);
+            this.btnAdicionar.Location = new System.Drawing.Point(657, 278);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(116, 34);
             this.btnAdicionar.TabIndex = 12;
@@ -211,13 +216,35 @@
             // 
             // btnMostrar
             // 
-            this.btnMostrar.Location = new System.Drawing.Point(536, 241);
+            this.btnMostrar.Location = new System.Drawing.Point(535, 278);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(116, 34);
             this.btnMostrar.TabIndex = 13;
             this.btnMostrar.Text = "Mostrar";
             this.btnMostrar.UseVisualStyleBackColor = true;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
+            // 
+            // rdbCartao
+            // 
+            this.rdbCartao.AutoSize = true;
+            this.rdbCartao.Location = new System.Drawing.Point(25, 200);
+            this.rdbCartao.Name = "rdbCartao";
+            this.rdbCartao.Size = new System.Drawing.Size(89, 29);
+            this.rdbCartao.TabIndex = 14;
+            this.rdbCartao.TabStop = true;
+            this.rdbCartao.Text = "Cartão";
+            this.rdbCartao.UseVisualStyleBackColor = true;
+            // 
+            // rdbDinheiro
+            // 
+            this.rdbDinheiro.AutoSize = true;
+            this.rdbDinheiro.Location = new System.Drawing.Point(120, 200);
+            this.rdbDinheiro.Name = "rdbDinheiro";
+            this.rdbDinheiro.Size = new System.Drawing.Size(102, 29);
+            this.rdbDinheiro.TabIndex = 15;
+            this.rdbDinheiro.TabStop = true;
+            this.rdbDinheiro.Text = "Dinheiro";
+            this.rdbDinheiro.UseVisualStyleBackColor = true;
             // 
             // CadastrarVenda
             // 
@@ -248,7 +275,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNomeCLiente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblListaProdutos;
         private System.Windows.Forms.Label label3;
@@ -263,5 +290,7 @@
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.Button btnFinalizar;
         private System.Windows.Forms.Button btnMostrar;
+        private System.Windows.Forms.RadioButton rdbDinheiro;
+        private System.Windows.Forms.RadioButton rdbCartao;
     }
 }

@@ -15,21 +15,22 @@ namespace Info_Mercado
         public Produtos()
         {
             InitializeComponent();
-            lstProdutos.LabelEdit = true;
-            lstProdutos.AllowColumnReorder = true;
-            lstProdutos.FullRowSelect = true;
-            lstProdutos.GridLines = true;
-
-            lstProdutos.Columns.Add("Id", 50, HorizontalAlignment.Left);
-            lstProdutos.Columns.Add("Nome", 100, HorizontalAlignment.Left);
-            lstProdutos.Columns.Add("Preço", 260, HorizontalAlignment.Left);
-            lstProdutos.Columns.Add("Qtd", 100, HorizontalAlignment.Left);
+            
+           
         }
 
-        private void btnCadastrarProduto_Click(object sender, EventArgs e)
+        private void cadastrarProdutoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var cadastroProduto = new Produtos();
+            var cadastroProduto = new CadastroProd();
             cadastroProduto.ShowDialog();
         }
+
+        private void pesquisarProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var pesquesaProduto = new PesquisaProd();
+            pesquesaProduto.ShowDialog();
+        }
+
+        
     }
 }

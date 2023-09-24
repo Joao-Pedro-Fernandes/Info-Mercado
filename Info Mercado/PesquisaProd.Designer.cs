@@ -83,6 +83,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listProd);
             this.Name = "PesquisaProd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PesquisaProd";
             this.ResumeLayout(false);
             this.PerformLayout();

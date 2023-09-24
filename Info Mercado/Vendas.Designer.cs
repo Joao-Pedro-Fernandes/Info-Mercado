@@ -28,33 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.lstVendas = new System.Windows.Forms.ListView();
             this.btnCadastrarVenda = new System.Windows.Forms.Button();
+            this.btnMostrarVendas = new System.Windows.Forms.Button();
+            this.txtPesquisaVenda = new System.Windows.Forms.TextBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(201, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tabela de Vendas";
             // 
             // lstVendas
             // 
             this.lstVendas.HideSelection = false;
-            this.lstVendas.Location = new System.Drawing.Point(12, 46);
+            this.lstVendas.Location = new System.Drawing.Point(12, 64);
             this.lstVendas.Name = "lstVendas";
-            this.lstVendas.Size = new System.Drawing.Size(608, 533);
+            this.lstVendas.Size = new System.Drawing.Size(608, 515);
             this.lstVendas.TabIndex = 2;
             this.lstVendas.UseCompatibleStateImageBehavior = false;
             // 
             // btnCadastrarVenda
             // 
-            this.btnCadastrarVenda.Location = new System.Drawing.Point(632, 46);
+            this.btnCadastrarVenda.Location = new System.Drawing.Point(632, 72);
             this.btnCadastrarVenda.Margin = new System.Windows.Forms.Padding(6);
             this.btnCadastrarVenda.Name = "btnCadastrarVenda";
             this.btnCadastrarVenda.Size = new System.Drawing.Size(206, 54);
@@ -63,14 +55,46 @@
             this.btnCadastrarVenda.UseVisualStyleBackColor = true;
             this.btnCadastrarVenda.Click += new System.EventHandler(this.btnCadastrarVenda_Click);
             // 
+            // btnMostrarVendas
+            // 
+            this.btnMostrarVendas.Location = new System.Drawing.Point(632, 138);
+            this.btnMostrarVendas.Margin = new System.Windows.Forms.Padding(6);
+            this.btnMostrarVendas.Name = "btnMostrarVendas";
+            this.btnMostrarVendas.Size = new System.Drawing.Size(206, 54);
+            this.btnMostrarVendas.TabIndex = 6;
+            this.btnMostrarVendas.Text = "Mostrar Vendas";
+            this.btnMostrarVendas.UseVisualStyleBackColor = true;
+            this.btnMostrarVendas.Click += new System.EventHandler(this.btnMostrarVendas_Click);
+            // 
+            // txtPesquisaVenda
+            // 
+            this.txtPesquisaVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisaVenda.Location = new System.Drawing.Point(12, 15);
+            this.txtPesquisaVenda.Name = "txtPesquisaVenda";
+            this.txtPesquisaVenda.Size = new System.Drawing.Size(608, 38);
+            this.txtPesquisaVenda.TabIndex = 7;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(632, 11);
+            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(6);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(206, 51);
+            this.btnPesquisar.TabIndex = 8;
+            this.btnPesquisar.Text = "Pesquisar Cliente";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
             // Vendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 591);
+            this.Controls.Add(this.btnPesquisar);
+            this.Controls.Add(this.txtPesquisaVenda);
+            this.Controls.Add(this.btnMostrarVendas);
             this.Controls.Add(this.btnCadastrarVenda);
             this.Controls.Add(this.lstVendas);
-            this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Vendas";
@@ -82,9 +106,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView lstVendas;
         private System.Windows.Forms.Button btnCadastrarVenda;
+        private System.Windows.Forms.Button btnMostrarVendas;
+        private System.Windows.Forms.TextBox txtPesquisaVenda;
+        private System.Windows.Forms.Button btnPesquisar;
     }
 }

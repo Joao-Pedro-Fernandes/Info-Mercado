@@ -13,10 +13,25 @@ namespace Info_Mercado
         private List<Produto> produtos = new List<Produto>();
         private double valor_total;
         private string data;
+        private string pagamento;
+
+        public string GetProdutos()
+        {
+            string produtos = "";
+
+            foreach (Produto produto in Produtos)
+            {
+                produtos += produto.QtdVenda + " " + produto.Nome + " ";
+            }
+
+            return produtos;
+        }
+
+        public string Pagamento { get; set; }
         public int Id { get; set; }
-        public int Cliente { get; set; }
+        public string Cliente { get; set; }
         public List<Produto> Produtos { get; set; }
-        public int Valor_Total { get; set; }
+        public double Valor_Total { get; set; }
         public string Data { get; set; }
     }
 }
